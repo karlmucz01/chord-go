@@ -12,12 +12,12 @@ func HashStringSha256(input string) []byte {
 	// Computes a SHA256 hash of a string
 	// use cases for hashing an IP for node identifiers or a filename for key identifiers
 	hashStr := sha256.Sum256([]byte(input))
-	return hashStr[:8]
+	return hashStr[:4]
 }
 
 func HashStringSha1(input string) []byte {
 	hashStr := sha1.Sum([]byte(input))
-	return hashStr[:8]
+	return hashStr[:2]
 }
 
 func ByteSliceToUint32(hashSlice []byte) (uint32, error) {
