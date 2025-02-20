@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	x := utils.IdentifierFromString("hello")
+	x := utils.IdentifierFromStringSha1("karlmuc")
 	fmt.Println(x)
 }
